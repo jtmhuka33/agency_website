@@ -1,9 +1,9 @@
-<script setup lange="ts"></script>
+<script setup lang="ts"></script>
 <template>
   <UPageSection>
     <UPageCTA
       title="Ready to Bring Your Vision to Life"
-      description="From concept to code, we build high-performance software tailored to your specific market needs."
+      description="From concept to code, we build software tailored to your specific business needs."
       variant="soft"
       :links="[
         {
