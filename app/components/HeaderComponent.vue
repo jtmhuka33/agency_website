@@ -3,6 +3,11 @@ import type { NavigationMenuItem } from "@nuxt/ui";
 const route = useRoute();
 const items = computed<NavigationMenuItem[]>(() => [
   {
+    label: "Home",
+    to: "/",
+    active: route.path === "/",
+  },
+  {
     label: "Contact",
     to: "/contact",
     active: route.path.startsWith("/contact"),
