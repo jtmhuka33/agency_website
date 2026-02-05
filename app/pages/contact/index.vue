@@ -60,44 +60,50 @@ import * as z from 'zod';
 </script>
 
 <template>
-  <UContainer>
-    <UPageSection
-      title="Contact Us"
-      description="Interested in working together? Fill out the form below and we'll get back to you as soon as possible."
-      class="mb-8"
-    />
-    <UForm :schema="schema" :state="formState" :ui="{ wrapper: 'max-w-2xl mx-auto space-y-6' }" @submit="onSubmit">
-      <UFormField required label="First Name" name="firstName">
-        <UInput v-model="formState.firstName"/>
-      </UFormField>
-      <UFormField required label="Last Name" name="lastName">
-        <UInput v-model="formState.lastName"/>
-      </UFormField>
-      <UFormField required label="Email" name="email">
-        <UInput v-model="formState.email" type="email"/>
-      </UFormField>
-      <UFormField required label="Company" name="company">
-        <UInput v-model="formState.company"/>
-      </UFormField>
-      <UFormField required label="Service Interested In" name="service">
-        <USelect v-model="formState.service" :items="serviceOptions"/>
-      </UFormField>
-      <UFormField required label="Project Description" name="projectDescription">
-        <UTextarea v-model="formState.projectDescription"/>
-      </UFormField>
-      <UFormField label="Budget" name="budget">
-        <USelect v-model="formState.budget" :items="budgetOptions"/>
-      </UFormField>
-      <UFormField label="Timeline" name="timeline">
-        <USelect :items="timelineOptions"/>
-      </UFormField>
-      <UFormField label="How Did You Hear About Us?" name="source">
-        <USelect v-model="formState.source" :items="sourceOptions"/>
-      </UFormField>
-      <UButton type="submit">
-        Submit
-      </UButton>
-    </UForm>
+  <UContainer class="min-h-screen flex flex-col items-center justify-center py-12">
+    <div class="w-full max-w-2xl">
+      <UPageSection
+        title="Contact Us"
+        description="Interested in working together? Fill out the form below and we'll get back to you as soon as possible."
+        class="mb-8 text-center"
+      />
+      <UForm class="space-y-6" :schema="schema" :state="formState" @submit="onSubmit">
+        <div class="grid grid-cols-2 gap-4">
+          <UFormField required label="First Name" name="firstName" class="w-full">
+            <UInput v-model="formState.firstName" class="w-full" />
+          </UFormField>
+          <UFormField required label="Last Name" name="lastName" class="w-full">
+            <UInput v-model="formState.lastName" class="w-full" />
+          </UFormField>
+        </div>
+        <UFormField required label="Email" name="email" class="w-full">
+          <UInput v-model="formState.email" type="email" class="w-full" />
+        </UFormField>
+        <UFormField required label="Company" name="company" class="w-full">
+          <UInput v-model="formState.company" class="w-full" />
+        </UFormField>
+        <UFormField required label="Service Interested In" name="service" class="w-full">
+          <USelect v-model="formState.service" :items="serviceOptions" class="w-full" />
+        </UFormField>
+        <UFormField required label="Project Description" name="projectDescription" class="w-full">
+          <UTextarea v-model="formState.projectDescription" class="w-full" :rows="4" />
+        </UFormField>
+        <div class="grid grid-cols-2 gap-4">
+          <UFormField label="Budget" name="budget" class="w-full">
+            <USelect v-model="formState.budget" :items="budgetOptions" class="w-full" />
+          </UFormField>
+          <UFormField label="Timeline" name="timeline" class="w-full">
+            <USelect v-model="formState.timeline" :items="timelineOptions" class="w-full" />
+          </UFormField>
+        </div>
+        <UFormField label="How Did You Hear About Us?" name="source" class="w-full">
+          <USelect v-model="formState.source" :items="sourceOptions" class="w-full" />
+        </UFormField>
+        <UButton type="submit" class="w-full" size="lg">
+          Submit
+        </UButton>
+      </UForm>
+    </div>
   </UContainer>
 </template>
 <style scoped>
