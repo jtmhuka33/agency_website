@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxt/a11y"],
+  modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxt/a11y", "@nuxt/image"],
 
   devtools: {
     enabled: true,
@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
   routeRules: {
-    "/": { prerender: true },
+    "/": {prerender: true},
   },
 
   compatibilityDate: "2025-01-15",

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from "@nuxt/ui";
+import type {NavigationMenuItem} from "@nuxt/ui";
+
 const route = useRoute();
 const items = computed<NavigationMenuItem[]>(() => [
   {
@@ -17,13 +18,16 @@ const items = computed<NavigationMenuItem[]>(() => [
 <template>
   <UHeader>
     <template #left>
-      <NuxtLink to="/">
-        <AppLogo class="w-auto h-6 shrink-0" />
-      </NuxtLink>
+      <NuxtImg
+        src="/MhukaLogo.png"
+        alt="Company Logo"
+        formate="webp"
+        height="75"
+      />
     </template>
-    <UNavigationMenu :items="items" />
+    <UNavigationMenu :items="items"/>
     <template #right>
-      <UColorModeButton />
+      <UColorModeButton/>
     </template>
   </UHeader>
 </template>
