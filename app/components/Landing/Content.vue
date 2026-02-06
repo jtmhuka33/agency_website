@@ -1,8 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AboutMe from "~/components/Landing/AboutMe.vue";
+</script>
 
 <template>
   <div>
     <LandingHero />
+    <AboutMe />
     <LandingServices />
     <LandingCTA />
   </div>

@@ -14,16 +14,22 @@ const items = computed<NavigationMenuItem[]>(() => [
     active: route.path.startsWith("/contact"),
   },
 ]);
+
+const isDarkMode = computed(() => useColorMode().value === 'dark');
+const logoSrc = computed(() => isDarkMode.value ? '/MhukaLogoDark.png' : '/MhukaLogo.png');
 </script>
 <template>
   <UHeader>
     <template #left>
-      <NuxtImg
-        src="/MhukaLogo.png"
-        alt="Company Logo"
-        formate="webp"
-        height="75"
-      />
+      <NuxtLink to="/">
+        <NuxtImg
+          :src="logoSrc"
+          alt="Company Logo"
+          formate="webp"
+          height="75"
+        />
+      </NuxtLink>
+
     </template>
     <UNavigationMenu :items="items"/>
     <template #right>
