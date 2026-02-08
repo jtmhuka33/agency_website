@@ -6,6 +6,7 @@ import AboutMe from "~/components/Landing/AboutMe.vue";
   <div>
     <LandingHero />
     <AboutMe />
+    <LandingProcess />
     <LandingServices />
     <LandingCTA />
   </div>
