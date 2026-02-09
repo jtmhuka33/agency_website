@@ -15,8 +15,8 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
 ]);
 
-const isDarkMode = computed(() => useColorMode().value === 'dark');
-const logoSrc = computed(() => isDarkMode.value ? '/MhukaLogoDark.png' : '/MhukaLogo.png');
+const colorMode = useColorMode();
+const logoSrc = computed(() => colorMode.value === 'dark' ? '/MhukaLogoDark.png' : '/MhukaLogo.png');
 </script>
 <template>
   <UHeader>
