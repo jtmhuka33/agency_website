@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
   const body = await readValidatedBody(event, contactSchema.parse);
 
   const { data, error } = await resend.emails.send({
-    from: 'Contact Form <onboarding@resend.dev>',
+    from: `Contact Form <landing@mhuka-consulting.com>`,
     to: [recipientEmail],
     replyTo: body.email,
     subject: `New inquiry from ${body.firstName} ${body.lastName} — ${body.service}`,
