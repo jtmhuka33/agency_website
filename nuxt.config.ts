@@ -19,4 +19,8 @@ export default defineNuxtConfig({
       stylistic: false,
     },
   },
+  runtimeConfig:{
+    resendApiKey: process.env.RESEND_API_KEY,
+    contactEmail: process.env.CONTACT_EMAIL
+  }
 });
