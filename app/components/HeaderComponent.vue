@@ -18,7 +18,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 <template>
   <UHeader>
-    <template #left>
+    <template #title>
       <NuxtLink to="/">
         <NuxtImg
           src="/MhukaLogo.png"
@@ -40,6 +40,9 @@ const items = computed<NavigationMenuItem[]>(() => [
     <UNavigationMenu :items="items"/>
     <template #right>
       <UColorModeButton/>
+    </template>
+    <template #body>
+      <UNavigationMenu :items="items" orientation="horizontal" />
     </template>
   </UHeader>
 </template>

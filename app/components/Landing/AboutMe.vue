@@ -28,7 +28,7 @@ const aboutFeatures = ref<PageFeatureProps[]>([
     title="Tadiwanashe John Mhuka"
     orientation="horizontal"
     :features="aboutFeatures"
-    class="justify-center items-center gap-12 lg:gap-24"
+    :ui="{container: 'lg:py-15'}"
   >
 
     <NuxtImg
