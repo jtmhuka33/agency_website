@@ -15,18 +15,24 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
 ]);
 
-const colorMode = useColorMode();
-const logoSrc = computed(() => colorMode.value === 'dark' ? '/MhukaLogoDark.png' : '/MhukaLogo.png');
 </script>
 <template>
   <UHeader>
     <template #left>
       <NuxtLink to="/">
         <NuxtImg
-          :src="logoSrc"
+          src="/MhukaLogo.png"
           alt="Company Logo"
-          formate="webp"
+          format="webp"
           height="75"
+          class="dark:hidden"
+        />
+        <NuxtImg
+          src="/MhukaLogoDark.png"
+          alt="Company Logo"
+          format="webp"
+          height="75"
+          class="hidden dark:block"
         />
       </NuxtLink>
 
