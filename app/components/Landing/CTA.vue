@@ -8,17 +8,9 @@
       :links="[
         {
           label: 'Start Your Project',
-          to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',
-          target: '_blank',
+          to: '/contact',
           trailingIcon: 'i-lucide-arrow-right',
           color: 'neutral',
-        },
-        {
-          label: 'See How We Work',
-          to: '/method',
-          target: '_blank',
-          color: 'neutral',
-          variant: 'outline',
         },
       ]"
     />

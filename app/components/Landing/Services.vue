@@ -3,7 +3,7 @@ const cards = useState(() => [
   {
     title: "Web / App Development",
     description:
-      "Custom-built, blazing-fast websites and mobile applications that turn visitors into customers. We use cutting-edge frameworks to deliver pixel-perfect designs that load instantly and rank higher on search engines.",
+      "Custom-built, blazing-fast websites and mobile applications that turn visitors into customers. We use cutting-edge frameworks to deliver pixel-perfect designs that help your business shine",
     icon: "i-lucide-code",
   },
   {
