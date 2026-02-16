@@ -1,31 +1,25 @@
 <script setup lang="ts">
 const cards = useState(() => [
   {
-    title: "Web Development",
+    title: "Web / App Development",
     description:
-      "Custom-built, blazing-fast websites that turn visitors into customers. We use cutting-edge frameworks to deliver pixel-perfect designs that load instantly and rank higher on search engines.",
+      "Custom-built, blazing-fast websites and mobile applications that turn visitors into customers. We use cutting-edge frameworks to deliver pixel-perfect designs that load instantly and rank higher on search engines.",
     icon: "i-lucide-code",
   },
   {
-    title: "AI Integration",
+    title: "AI Integration & Automation",
     description:
-      "Supercharge your business with intelligent automation. From chatbots to predictive analytics, we seamlessly integrate the latest AI models to streamline workflows and unlock new revenue streams.",
+      "Supercharge your business with intelligent automation. From chatbots to internal assistants, we seamlessly integrate the latest AI models to streamline workflows",
     icon: "i-lucide-brain",
-  },
-  {
-    title: "Mobile App Development",
-    description:
-      "Native-quality apps for iOS and Android that your customers will love. We build smooth, intuitive mobile experiences that keep users engaged and drive growth across every device.",
-    icon: "i-lucide-smartphone",
   },
 ]);
 </script>
 
 <template>
   <UContainer>
-    <UPageGrid :ui="{ wrapper: 'sm:grid-cols-1' }">
-      <UPageCard v-for="(card, index) in cards" :key="index" v-bind="card" />
-    </UPageGrid>
+    <div class="flex flex-col sm:flex-row gap-8">
+      <UPageCard v-for="(card, index) in cards" :key="index" :ui="{root:'sm:w-1/2' }" v-bind="card"/>
+    </div>
   </UContainer>
 </template>
 
