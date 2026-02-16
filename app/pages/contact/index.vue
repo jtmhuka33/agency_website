@@ -82,11 +82,12 @@ async function onSubmit() {
 </script>
 
 <template>
-  <UContainer class="min-h-screen flex flex-col items-center justify-center py-12">
+  <UContainer class="min-h-screen flex flex-col items-center py-12">
     <div class="w-full max-w-2xl">
       <UPageSection
         title="Contact Us"
-        description="Interested in working together? Fill out the form below and we'll get back to you as soon as possible."
+        :ui="{ container: 'py-8 sm:py-12 lg:py-16' }"
+        description="Interested in working together? Fill out the form below and we'll get back to you in 24-48 hours"
         class="mb-8 text-center"
       />
       <UForm class="space-y-6" :schema="schema" :state="formState" @submit="onSubmit">
