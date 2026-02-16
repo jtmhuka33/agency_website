@@ -18,7 +18,8 @@ const formState = useState(() => ({
   projectDescription: '',
   budget: '',
   timeline: '',
-  source: ''
+  source: '',
+  website: ''
 }));
 
 const budgetOptions = [
@@ -59,7 +60,8 @@ const schema = z.object({
   projectDescription: z.string().min(1, 'Please provide a project description'),
   budget: z.string().optional(),
   timeline: z.string().optional(),
-  source: z.string().optional()
+  source: z.string().optional(),
+  website: z.string().optional()
 });
 
 const toast = useToast()
@@ -99,6 +101,10 @@ async function onSubmit() {
         class="mb-8 text-center"
       />
       <UForm class="space-y-6" :schema="schema" :state="formState" @submit="onSubmit">
+        <div class="absolute opacity-0 -z-10 pointer-events-none" aria-hidden="true" tabindex="-1">
+          <label for="website">Website</label>
+          <input id="website" v-model="formState.website" type="text" name="website" autocomplete="off" tabindex="-1">
+        </div>
         <div class="grid grid-cols-2 gap-4">
           <UFormField required label="First Name" name="firstName" class="w-full">
             <UInput v-model="formState.firstName" class="w-full"/>

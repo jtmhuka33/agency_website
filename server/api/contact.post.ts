@@ -10,7 +10,8 @@ const contactSchema = z.object({
   projectDescription: z.string().min(1),
   budget: z.string().optional(),
   timeline: z.string().optional(),
-  source: z.string().optional()
+  source: z.string().optional(),
+  website: z.string().optional()
 });
 
 export default defineEventHandler(async (event) => {
@@ -19,6 +20,13 @@ export default defineEventHandler(async (event) => {
   const recipientEmail = config.contactEmail;
 
   const body = await readValidatedBody(event, contactSchema.parse);
+
+  if (body.website) {
+    throw createError({
+      status: 422,
+      statusText: 'Validation failed.',
+    });
+  }
 
   const { data, error } = await resend.emails.send({
     from: `Contact Form <landing@mhuka-consulting.com>`,
