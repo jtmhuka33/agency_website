@@ -26,6 +26,7 @@ const steps = [
 
 <template>
   <UPageSection
+    title="Our Process"
     :ui="{ container: 'py-8 sm:py-12 lg:py-16' }"
   >
     <UTimeline

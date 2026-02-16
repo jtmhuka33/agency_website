@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import * as z from 'zod';
 
+useSeoMeta({
+  title: 'Contact Us | Mhuka Consulting',
+  description: 'Get in touch with Mhuka Consulting. Tell us about your project and we\'ll get back to you within 24-48 hours.',
+  ogTitle: 'Contact Us | Mhuka Consulting',
+  ogDescription: 'Get in touch with Mhuka Consulting. Tell us about your project and we\'ll get back to you within 24-48 hours.',
+  ogUrl: 'https://mhuka-consulting.com/contact',
+})
+
 const formState = useState(() => ({
   firstName: '',
   lastName: '',

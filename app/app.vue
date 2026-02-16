@@ -1,25 +1,20 @@
 <script setup>
 useHead({
   meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
-  link: [{ rel: "icon", href: "/favicon.ico" }],
-  htmlAttrs: {
-    lang: "en",
-  },
 });
-
-const title = "Mhuka SoftTech";
-const description =
-  "A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours.";
 
 useSeoMeta({
-  title,
-  description,
-  ogTitle: title,
-  ogDescription: description,
-  ogImage: "https://ui.nuxt.com/assets/templates/nuxt/starter-light.png",
-  twitterImage: "https://ui.nuxt.com/assets/templates/nuxt/starter-light.png",
-  twitterCard: "summary_large_image",
-});
+  title: 'Software Consulting | Mhuka Consulting',
+  description: 'We build custom software and AI solutions for businesses in Europe.',
+  ogTitle: 'Software Consulting | Mhuka Consulting',
+  ogDescription: 'We build custom software and AI solutions for businesses in Europe.',
+  ogImage: 'https://mhuka-consulting.com/og-image.png',
+  ogType: 'website',
+  ogUrl: 'https://mhuka-consulting.com',
+  ogSiteName: 'Mhuka Consulting',
+  twitterCard: 'summary_large_image',
+  twitterImage: 'https://mhuka-consulting.com/og-image.png',
+})
 </script>
 
 <template>
@@ -34,7 +29,7 @@ useSeoMeta({
     <UFooter>
       <template #default>
         <p class="text-sm text-muted">
-          Mhuka SoftTech • © {{ new Date().getFullYear() }}
+          Mhuka Consulting • © {{ new Date().getFullYear() }}
         </p>
       </template>
     </UFooter>

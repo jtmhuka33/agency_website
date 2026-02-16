@@ -1,7 +1,41 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxt/a11y", "@nuxt/image"],
+
+  site:{
+    url: 'https://mhuka-consulting.com',
+    name: 'Mhuka Consulting'
+  },
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    }
+  },
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/ui",
+    "@nuxt/a11y",
+    "@nuxt/image",
+    "@nuxtjs/seo"
+  ],
+
+  schemaOrg: {
+    identity: {
+      type: 'Organization',
+      name: 'Mhuka Consulting',
+      description: 'Software and AI consulting for businesses in Europe',
+      url: 'https://mhuka-consulting.com',
+      logo: '/MhukaLogo.png',
+      address: {
+        streetAddress: 'Ottostraße 10',
+        addressLocality: 'Stadtbergen',
+        addressRegion: 'Bavaria',
+        postalCode: '86391',
+        addressCountry: 'DE'
+      },
+      email: 'contact@mhuka-consulting.com',
+    }
+  },
 
   devtools: {
     enabled: true,
@@ -11,6 +45,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/": {prerender: true},
+    "/contact": {prerender: true},
   },
 
   compatibilityDate: "2025-01-15",

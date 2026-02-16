@@ -17,6 +17,7 @@ const cards = useState(() => [
 
 <template>
   <UContainer>
+    <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
     <div class="flex flex-col sm:flex-row gap-8">
       <UPageCard v-for="(card, index) in cards" :key="index" :ui="{root:'sm:w-1/2' }" v-bind="card"/>
     </div>
