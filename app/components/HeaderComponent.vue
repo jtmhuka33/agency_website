@@ -24,15 +24,17 @@ const items = computed<NavigationMenuItem[]>(() => [
           src="/MhukaLogo.png"
           alt="Company Logo"
           format="webp"
+          width="137"
           height="75"
-          class="dark:hidden"
+          class="dark:hidden h-[75px] w-auto"
         />
         <NuxtImg
           src="/MhukaLogoDark.png"
           alt="Company Logo"
           format="webp"
+          width="137"
           height="75"
-          class="hidden dark:block"
+          class="hidden dark:block h-[75px] w-auto"
         />
       </NuxtLink>
 
