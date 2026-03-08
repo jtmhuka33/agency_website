@@ -46,6 +46,7 @@ export default defineNuxtConfig({
   routeRules: {
     "/": {prerender: true},
     "/contact": {prerender: true},
+    "/brutaldo/privacy-policy": {prerender: true},
   },
 
   compatibilityDate: "2025-01-15",
