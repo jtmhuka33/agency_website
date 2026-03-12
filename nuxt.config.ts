@@ -47,6 +47,7 @@ export default defineNuxtConfig({
     "/": {prerender: true},
     "/contact": {prerender: true},
     "/brutaldo/privacy-policy": {prerender: true},
+    "/brutaldo/terms-of-service": {prerender: true},
   },
 
   compatibilityDate: "2025-01-15",
