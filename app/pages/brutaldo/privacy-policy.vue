@@ -1,16 +1,16 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Privacy Policy | brutalDO',
-  description: 'Privacy Policy for brutalDO — a task management app by Mhuka Consulting. Your data stays on your device.',
+  description: 'Privacy Policy for brutalDO — a task management app by Mhuka Consulting. Your tasks stay on your device; we collect only anonymous usage analytics.',
   ogTitle: 'Privacy Policy | brutalDO',
-  ogDescription: 'Privacy Policy for brutalDO — a task management app by Mhuka Consulting. Your data stays on your device.',
+  ogDescription: 'Privacy Policy for brutalDO — a task management app by Mhuka Consulting. Your tasks stay on your device; we collect only anonymous usage analytics.',
   ogUrl: 'https://mhuka-consulting.com/brutaldo/privacy-policy',
 })
 
 const sections = [
   {
     title: 'Introduction',
-    body: 'Mhuka Consulting ("we", "us", or "our") operates the brutalDO mobile application. This Privacy Policy explains how we collect, use, and protect your information when you use our app.\n\nLast updated: February 17, 2026',
+    body: 'Mhuka Consulting ("we", "us", or "our") operates the brutalDO mobile application. This Privacy Policy explains how we collect, use, and protect your information when you use our app.\n\nLast updated: April 7, 2026',
   },
   {
     title: 'Data Storage',
@@ -18,7 +18,11 @@ const sections = [
   },
   {
     title: 'Information We Do Not Collect',
-    body: 'We do not collect, transmit, or store your tasks, notes, or to-do items; personal identification information; location data; contacts or address book data; photos, media, or files; or usage analytics and tracking data.',
+    body: 'We do not collect, transmit, or store your tasks, notes, or to-do items; personal identification information such as your name or email; location data; contacts or address book data; or photos, media, or files.',
+  },
+  {
+    title: 'Anonymous Usage Analytics',
+    body: 'To help us understand how the app is used and improve it over time, brutalDO sends anonymous usage events to PostHog (EU cloud). A randomly-generated identifier is created on your device the first time you open the app — this ID is not linked to your name, email, or any other personal information.\n\nThe events we track include actions such as creating or completing tasks, starting the Pomodoro timer, and creating projects. The properties sent with these events describe feature usage (e.g. whether a task has a due date or subtasks) — never the content of your tasks.\n\nWe do not collect your IP address, location, or device fingerprint beyond what PostHog\'s SDK may capture by default. Data is processed on PostHog\'s EU infrastructure and is not used for advertising or profiling.\n\nLegal basis: Legitimate interests (Art. 6(1)(f) GDPR) in improving the product through aggregate, non-identifiable usage patterns.\n\nTo opt out, email contact@mhuka-consulting.com with the subject "Analytics opt-out".',
   },
   {
     title: 'Notifications',
@@ -30,7 +34,7 @@ const sections = [
   },
   {
     title: 'Third-Party Services',
-    body: 'The app integrates with Apple App Store / Google Play Store for in-app purchases and subscription management, and Expo for app updates and build infrastructure. These services have their own privacy policies governing their data practices.',
+    body: 'The app integrates with the following third-party services:\n\n• Apple App Store / Google Play Store — for in-app purchases and subscription management\n• Expo — for app updates and build infrastructure\n• PostHog (EU cloud) — for anonymous usage analytics (see "Anonymous Usage Analytics" above)\n\nEach of these services has its own privacy policy governing their data practices.',
   },
   {
     title: "Children's Privacy",
@@ -74,7 +78,7 @@ const sections = [
         Privacy Policy
       </h1>
       <p class="text-gray-500 dark:text-gray-400 text-sm">
-        Last updated: February 17, 2026
+        Last updated: April 7, 2026
       </p>
 
       <USeparator class="mt-8" />
@@ -84,7 +88,7 @@ const sections = [
     <div class="rounded-xl bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 p-5 mb-10 flex gap-4">
       <UIcon name="i-lucide-lock" class="size-5 text-red-500 mt-0.5 shrink-0" />
       <p class="text-sm text-red-700 dark:text-red-300 leading-relaxed">
-        brutalDO is a <strong>fully local app</strong>. All your tasks, settings, and data remain on your device. We do not run servers that collect or store your personal information.
+        All your tasks, settings, and data remain <strong>on your device</strong>. We collect only anonymous usage analytics to improve the app — no personal information, no task content, and no advertising data.
       </p>
     </div>
 
